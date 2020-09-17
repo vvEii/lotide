@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   let goodEmoji = String.fromCodePoint(0x1F525);
   let badEmoji = String.fromCodePoint(0x1F608);
   if (actual === expected) {
@@ -8,7 +8,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   } else {
@@ -30,30 +30,23 @@ const eqArrays = function (array1, array2) {
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
-  let isSame = true;
   let sizeOfObject1 = Object.keys(object1).length;
   let sizeOfObject2 = Object.keys(object2).length;
   if (sizeOfObject1 !== sizeOfObject2) {
-    isSame = false;
     return false;
   }
   for (let item in object1) {
-    if (!Array.isArray(object1[item]) && !Array.isArray(object2[item])) {
-      if (object1[item] !== object2[item]) {
-        isSame = false;
-        return isSame;
-      }
-    } else if (Array.isArray(object1[item]) && Array.isArray(object2[item])) {
+    if (Array.isArray(object1[item]) && Array.isArray(object2[item])) {
       if (!eqArrays(object1[item], object2[item])) {
-        isSame = false;
-        return isSame;
+        return false;
       }
     } else {
-      isSame = false;
-      return isSame;
+      if (object1[item] !== object2[item]) {
+        return false;
+      }
     }
   }
-  return isSame;
+  return true;
 };
 
 const ab = { a: "1", b: "2" };
