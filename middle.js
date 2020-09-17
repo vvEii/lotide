@@ -12,26 +12,17 @@ const assertEqual = function(actual, expected) {
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
-  } else if (array1.length === 0 && array2.length === 0) {
-    let result = true;
-    return result;
   } else {
-    let result;
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] === array2[i]) {
-        result = true;
-      } else {
-        result = false;
-      }
-      if (!result) {
-        return result;
+    for (let index in array1) {
+      if (array1[index] !== array2[index]) {
+        return false;
       }
     }
-    return result;
+    return true;
   }
 };
 
-const middle = function (array) {
+const middle = function(array) {
   let middle = [];
   let middleIndex = Math.floor(array.length / 2);
   if (array.length > 2) {
