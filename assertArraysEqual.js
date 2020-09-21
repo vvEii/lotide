@@ -1,4 +1,6 @@
 // FUNCTION IMPLEMENTATION
+const eqArrays = require('./eqArrays');
+
 const assertArraysEqual = function(actual, expected) {
   let goodEmoji = String.fromCodePoint(0x1F525);
   let badEmoji = String.fromCodePoint(0x1F608);
@@ -9,17 +11,4 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  } else {
-    for (let index in array1) {
-      if (array1[index] !== array2[index]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
-// TEST CODE
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
+module.exports = assertArraysEqual;
