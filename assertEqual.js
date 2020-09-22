@@ -1,4 +1,5 @@
 // FUNCTION IMPLEMENTATION
+
 const assertEqual = function(actual, expected) {
   let goodEmoji = String.fromCodePoint(0x1F525);
   let badEmoji = String.fromCodePoint(0x1F608);
