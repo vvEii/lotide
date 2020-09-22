@@ -31,3 +31,5 @@ The following functions are currently implemented:
 * `tail(array)`: return the last element in the array
 * `eqArrays(array1, array2)`: return true if the two passed arrays are equal; otherwise, return false
 * `eqObjects(object1, object2)`: return true if the two passed objects are equal; otherwise, return false
+* `countOnly(array,object)`: return an object contains the name and the number of ocurrences in the array, depends on the object passed in indicated if count the name or not
+* `flatten(array)`: return an one-level array of the passed nested array
