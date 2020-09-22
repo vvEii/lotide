@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@vvei/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "First project in Lighthouse Labs. A mini clone of the Lodash (https://lodash.com) library.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/vvEii/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name":"Cooper",
+    "email":"coopershang125@gmail.com",
+    "url": "https://github.com/vvEii"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vvEii/lotide/issues"
